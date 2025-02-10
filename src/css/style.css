@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    background-color: #fffff0;
+}
+main{
+    margin-top: 14vh;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+p{
+    width: 80%;
+    text-align: justify;
+}
