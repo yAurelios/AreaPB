@@ -9,7 +9,6 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-
     z-index: 100;
     display: flex;
     justify-content: center;
@@ -60,7 +59,7 @@ header{
     list-style-type: none;
 }
 .navBox ul li{
-    margin: 1rem;
+    margin-left: 2rem;
     height: auto;
     width: auto;
     border-bottom: solid 2px #281767;

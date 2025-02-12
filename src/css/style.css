@@ -11,19 +11,80 @@ html {
 
 body {
     width: 100%;
+    min-height: 100vh;
     height: auto;
     overflow-x: hidden;
     background-color: #fffff0;
-    display: flex;
+    display: block;
     justify-content: center;
 }
-main{
-    margin-top: 24vh;
+
+main {
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20vh;
     width: 80%;
     height: auto;
+    /* border: solid red 1px; */
+    /* padding-bottom: 5rem; */
+    display: block;
 }
-main h1, h2{
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* Estilização dos títulos gerais */
+section h1, 
+section h2 {
     color: #281767;
     display: inline-block;
     border-bottom: solid 8px #ffaa00;
+}
+
+section h1 {
+    font-size: 2rem !important;
+}
+
+main p {
+    width: 65%;
+    text-align: justify;
+}
+
+/* SEÇÃO #joinOnTeam */
+#joinOnTeam {
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Permite que os itens quebrem em telas menores */
+}
+
+#joinOnTeam img {
+    width: 40%;
+    height: auto;
+}
+
+#joinOnTeam div {
+    flex: 1;
+    min-width: 300px; /* Garante que o texto não fique espremido */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajustando h1 e h2 para evitar a borda estendida */
+#joinOnTeam h1,
+#joinOnTeam h2 {
+    border-bottom: none; /* Remove a borda direta no título */
+}
+
+#joinOnTeam h1 span,
+#joinOnTeam h2 span {
+    display: table; /* Faz com que o tamanho do span seja do tamanho do texto */
+    border-bottom: solid 8px #ffaa00; /* Aplica a borda apenas no texto */
+}
+
+#joinOnTeam p {
+    width: 100%;
+    text-align: justify;
 }
