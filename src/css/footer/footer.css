@@ -14,5 +14,11 @@ footer {
 
 footer h2{
     color: #281767;
-    border: 0;
+}
+
+@media (max-width: 600px) {
+    footer{
+        padding-top: 10vh;
+        width: 100%;
+    }
 }

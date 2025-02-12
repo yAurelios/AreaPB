@@ -53,10 +53,10 @@ main p {
 
 /* SEÇÃO #joinOnTeam */
 #joinOnTeam {
-    padding-top: 10vh;
+    padding-top: 6vh;
+    gap: 3vh;
     display: flex;
     align-items: center;
-    gap: 2rem;
     flex-wrap: wrap; /* Permite que os itens quebrem em telas menores */
 }
 
@@ -87,4 +87,20 @@ main p {
 #joinOnTeam p {
     width: 100%;
     text-align: justify;
+}
+
+
+@media (max-width: 600px) {
+    main p{
+        width: 100%;
+    }
+    #joinOnTeam img{
+        width: 100%;
+    }
+    section{
+        margin-bottom: 0.5rem;
+    }
+    section h1{
+        text-align: center;
+    }
 }
