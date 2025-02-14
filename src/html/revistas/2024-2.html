@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="/src/css/footer/footer.css">
     <!-- Estilização do load de revistas -->
     <link rel="stylesheet" href="/src/css/revistas/revistas.css">
-    <!-- Link Sistema JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 </head>
 <div id="header"></div>
 <body>
@@ -25,12 +23,10 @@
             <br><br>
             <p>De uma parceria entre CREA-PR e AREA-PB, a atuação de diversas engenharias visando um futuro mais sustentável. Nessa 3º Edição, a Revista Engenharia em Debate trás conteúdos diversos, a retrospectiva de 2022/2023/2024, novos padrões de sustentabilidade e planejamento urbano. Confira!</p>
         </section>
-        <canvas id="pdf-viewer"></canvas>
+        <a id="customPDF" href="revista.html?pdf=/src/pdf/3EdicaoRevista.pdf" target="_blank"><p>Abra o PDF por aqui</p></a>
+        <iframe src="/src/pdf/3EdicaoRevista.pdf" class="revista">
     </main>
     <div id="footer"></div>
-    
-<!-- Canvas visualização PDF -->
-<script src="/src/js/pdf.js"></script>
 </body>
 
 <!-- Script do Header -->

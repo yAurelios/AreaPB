@@ -32,10 +32,13 @@
     flex-wrap: wrap;
     gap: 1rem;
 }
-canvas{
+.revista{
     width: 100%;
     height: 80vh;
     margin-bottom: 3rem;
+}
+#customPDF{
+    padding: 1rem;
 }
 
 @media (max-width: 600px){
