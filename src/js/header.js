@@ -11,7 +11,7 @@ function loadHeader() {
                 <ul>
                     <li><a href="/">Página Inicial</a></li>
                     <li><a href="/">Eventos</a></li>
-                    <li><a href="/">Revista</a></li>
+                    <li><a href="/src/html/revista.html">Revista</a></li>
                     <li><a href="/">Associação</a></li>
                 </ul>
             </nav>

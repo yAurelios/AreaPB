@@ -45,7 +45,6 @@ section h2 {
 section h1 {
     font-size: 2rem !important;
 }
-
 main p {
     width: 65%;
     text-align: justify;
@@ -91,6 +90,9 @@ main p {
 
 
 @media (max-width: 600px) {
+    main{
+        margin-top: 15vh;
+    }
     main p{
         width: 100%;
     }

@@ -1,0 +1,49 @@
+/* <section class="magazine">
+                <h1 class="magazineTitle"><a href="${magazine.link}">${magazine.name}</a></h1>
+                <p class="magazineDate">${magazine.date}</p>
+                <p class="magazineDescription">${magazine.description}</p>
+            </section> */
+
+.magazine{
+    border-left: solid #ffaa00 10px;
+    margin-top: 3rem;
+    width: 100%;
+    border-bottom: none;
+    padding-left: 1rem;
+}
+.magazine h1{
+    border-bottom: none;
+}
+.magazineTitle a {
+    color: #281767;
+    text-decoration: none;
+}
+
+.magazineDate {
+    padding: 1rem;
+}
+
+
+/* ABA DA REVISTA */
+#otherPage{
+    /* border: solid red 1px; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.revista{
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 600px){
+    #otherPage{
+        gap: 0;
+    }
+    #otherPage p{
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+}
