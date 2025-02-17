@@ -1,6 +1,8 @@
 /eventos /src/html/eventos.html  200
-/associação /src/html/associacao.html  200
-/eventos /src/html/eventos.html 200
+
+/infos /src/html/infos.html  200
+
 /revista /src/html/revista.html  200
 /revista/2024-2 /src/html/revistas/2024-2.html 200
+
 / /index.html  200

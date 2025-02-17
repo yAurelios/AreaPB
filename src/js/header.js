@@ -10,9 +10,9 @@ function loadHeader() {
             <nav class="navBox" style="display: none;"> <!-- Oculta inicialmente -->
                 <ul>
                     <li><a href="/">Página Inicial</a></li>
-                    <li><a href="/">Eventos</a></li>
+                    <li><a href="/eventos">Eventos</a></li>
                     <li><a href="/revista">Revista</a></li>
-                    <li><a href="/">Associação</a></li>
+                    <li><a href="/infos">Sobre nós</a></li>
                 </ul>
             </nav>
         </div>
