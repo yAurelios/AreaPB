@@ -19,9 +19,11 @@ function loadRevistas() {
     magazines.forEach(magazine => {
         content += `
             <section class="magazine">
-                <h1 class="magazineTitle"><a href="${magazine.link}">${magazine.name}</a></h1>
-                <p class="magazineDate">${magazine.date}</p>
-                <p class="magazineDescription">${magazine.description}</p>
+                <a href="${magazine.link}">
+                    <h1 class="magazineTitle">${magazine.name}</h1>
+                    <p class="magazineDate">${magazine.date}</p>
+                    <p class="magazineDescription">${magazine.description}</p>
+                </a>
             </section>
         `;
     });

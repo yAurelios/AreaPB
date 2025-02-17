@@ -9,11 +9,10 @@
 .magazine h1{
     border-bottom: none;
 }
-.magazineTitle a {
-    color: #281767;
+.magazine a{
     text-decoration: none;
+    color: black;
 }
-
 .magazineDate {
     padding: 1rem;
 }
