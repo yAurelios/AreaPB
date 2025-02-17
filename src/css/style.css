@@ -53,6 +53,7 @@ main p {
 
 /* SEÇÃO #joinOnTeam */
 #joinOnTeam {
+    /* border: solid red 1px; */
     padding-top: 6vh;
     gap: 3vh;
     display: flex;
@@ -66,6 +67,8 @@ main p {
 }
 
 #joinOnTeam div {
+    width: 55%;
+    /* border: solid red 1px; */
     display: flex;
     flex-direction: column;
 }
@@ -73,6 +76,7 @@ main p {
 /* ajustando h1 e h2 para evitar a borda/sublinhado estendido */
 #joinOnTeam h1,
 #joinOnTeam h2 {
+    /* border: solid red 1px; */
     border-bottom: none;
     width: 100%;
     display: flex;
@@ -102,6 +106,16 @@ main p {
     }
     main p{
         width: 100%;
+    }
+    #joinOnTeam div{
+        text-align: center;
+        width: 100%;
+    }
+    #joinOnTeam h1{
+        width: 100%;
+        /* border: solid red 1px; */
+        display: flex;
+        justify-content: center;
     }
     #joinOnTeam img{
         width: 100%;
