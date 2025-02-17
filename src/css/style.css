@@ -44,7 +44,7 @@ section h2 {
 }
 
 section h1 {
-    font-size: 2rem !important;
+    font-size: 28px;
 }
 main p {
     width: 65%;
@@ -57,7 +57,7 @@ main p {
     gap: 3vh;
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Permite que os itens quebrem em telas menores */
+    flex-wrap: wrap;
 }
 
 #joinOnTeam img {
@@ -66,29 +66,32 @@ main p {
 }
 
 #joinOnTeam div {
-    flex: 1;
-    min-width: 300px; /* Garante que o texto não fique espremido */
     display: flex;
     flex-direction: column;
 }
 
-/* Ajustando h1 e h2 para evitar a borda estendida */
+/* ajustando h1 e h2 para evitar a borda/sublinhado estendido */
 #joinOnTeam h1,
 #joinOnTeam h2 {
-    border-bottom: none; /* Remove a borda direta no título */
+    border-bottom: none;
+    width: 100%;
+    display: flex;
 }
 
 #joinOnTeam h1 span,
 #joinOnTeam h2 span {
-    display: table; /* Faz com que o tamanho do span seja do tamanho do texto */
-    border-bottom: solid 8px #ffaa00; /* Aplica a borda apenas no texto */
+    display: table;
+    border-bottom: solid 8px #ffaa00;
 }
 
 #joinOnTeam p {
     width: 100%;
     text-align: justify;
 }
-
+.img-banner-presentention{
+    border-radius: 10px; 
+    box-shadow: outset 5px 10px 14px rgba(0, 0, 0, 0.4);
+}
 
 @media (max-width: 600px) {
     body{
@@ -107,6 +110,10 @@ main p {
         margin-bottom: 0.5rem;
     }
     section h1{
-        text-align: center;
+        text-align: justify;
+        font-size: 26px;
+    }
+    .img-banner-presentention{
+        box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.4);
     }
 }
