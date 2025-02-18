@@ -4,8 +4,8 @@ function loadHeader() {
     <button class="hamburger" aria-label="Toggle menu">☰</button>
         <div id="headerContent">
             <figure class="logo">
-                <img src="../../../src/img/areaPatoBranco.svg" alt="areaPBlogo" id="pcVersion"/>
-                <img src="../../../src/img/areaPatoBrancoWhite.svg" alt="areaPBlogo" id="mobileVersion"/>
+                <img src="/src/img/areaPatoBranco.svg" alt="areaPBlogo" id="pcVersion"/>
+                <img src="/src/img/areaPatoBrancoWhite.svg" alt="areaPBlogo" id="mobileVersion"/>
             </figure>
             <nav class="navBox" style="display: none;"> <!-- Oculta inicialmente -->
                 <ul>

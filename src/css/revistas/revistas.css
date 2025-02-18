@@ -38,8 +38,35 @@
     font-size: 16px;
     height: auto;
 }
-
+.revistaMobile{
+    display: none;
+}
 @media (max-width: 600px){
+    .revista{
+        display: none;
+    }
+    .revistaMobile{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* border: solid red 1px; */
+    }
+    .revistaMobile img{
+        width: 100%;
+        /* display: flex; */
+    }
+    .revistaMobile a{
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #281767;
+        border-radius: 20px;
+        text-align: center;
+        width: 50%;
+        color: white;
+        /* border: solid red 1px; */
+        /* text-decoration: underline; */
+    }
     #otherPage{
         gap: 0;
     }
