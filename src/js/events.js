@@ -6,8 +6,8 @@ const events = [
     {
 
         name: "Primeira Confraternização AREA Pato Branco 2025",
-        description: "Um evento para discutir novas práticas e tecnologias para um futuro mais sustentável na engenharia.",
-        date: "15 de Março de 2025",
+        description: "Realizada a primeira Confraternização da Associação de Engenheiros e Arquitetos de Pato Branco, com a apresentação da diretoria executiva e também os desafios para 2025.",
+        date: "08 de fevereiro 2025",
         link: "/eventos/2025/primeiro-encontro"
     },
 ];
