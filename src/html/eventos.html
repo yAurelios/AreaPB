@@ -4,10 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AREA PB - Eventos</title>
+    <!-- ShortCut -->
+    <link rel="shortcut icon" href="/src/img/areaPatoBranco.png">
+    <!-- Estilização do Header -->
+    <link rel="stylesheet" href="/src/css/header/header.css">
+    <!-- Estilização do Style padrão -->
+    <link rel="stylesheet" href="/src/css/style.css">
+    <!-- Estilização do Footer -->
+    <link rel="stylesheet" href="/src/css/footer/footer.css">
+    <!-- Estilização do load de eventos -->
+    <link rel="stylesheet" href="/src/css/eventos/events.css">
+
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0KBL67QW7H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0KBL67QW7H');
+</script>
+
+
+<div id="header"></div>
 <body>
-    <main style="display: flex; justify-content: center; align-items: center;">
-        <h2>Em desenvolvimento</h2>
+    <main>
+        <section>
+            <h1>Eventos da Associação de Engenheiros e Arquitetos de Pato Branco</h1>
+            <br><br>
+            <p>A AREA-PB participa e realiza eventos periodicamente focados em engenharia e arquitetura. Estes tratam dos principais temas para o desenvolvimento profissional, incluindo novidades técnicas, eventos, e cursos disponíveis.</p>
+        </section>
+        <div id="loadEvents"></div>
     </main>
+    <div id="footer"></div>
 </body>
+<!-- Script do Header -->
+<script src="/src/js/header.js"></script>
+<!-- Script do Footer -->
+<script src="/src/js/footer.js"></script>
+<!-- Script do menu de load das Revistas -->
+<script src="/src/js/events.js"></script>
 </html>

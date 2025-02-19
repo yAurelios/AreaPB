@@ -1,0 +1,49 @@
+/* <section class="event">
+                <a href="${event.link}">
+                    <h1 class="eventTitle">${event.name}</h1>
+                    <p class="eventDate">${event.date}</p>
+                    <p class="eventDescription">${event.description}</p>
+                </a>
+            </section> */
+
+            .event {
+    border-left: solid #ffaa00 10px;
+    margin-top: 3rem;
+    max-width: 100%;
+    width: 90%;
+    border-bottom: none;
+    padding-left: 1rem;
+}
+.event h1 {
+    border-bottom: none;
+}
+.event a {
+    text-decoration: none;
+    color: black;
+    /* border: solid red 1px; */
+    /* width: 100%; */
+}
+.eventDate {
+    padding: 1rem;
+}
+.eventImg{
+    width: 45%;
+    margin-bottom: 1rem;
+}
+/* Responsividade */
+@media (max-width: 600px) {
+    .event {
+        width: 100%;
+        padding: 0.5rem;
+    }
+    .event a {
+        display: block;
+        text-align: center;
+    }
+    .eventTitle {
+        font-size: 1.2rem;
+    }
+    .eventDescription {
+        font-size: 1rem;
+    }
+}
