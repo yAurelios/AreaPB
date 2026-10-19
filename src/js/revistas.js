@@ -9,6 +9,12 @@ const magazines = [
         date: "Ano 2024",
         link: "/revista/2024-2"
     },
+    {
+        name: "Revista Engenharia em Debate | 4ª Edição",
+        description: "Confira a 4ª edição da Revista Engenharia em Debate, publicada em 2026.",
+        date: "Ano 2026",
+        link: "/revista/2026-4"
+    },
 ];
 
 function loadRevistas() {
