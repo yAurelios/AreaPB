@@ -14,8 +14,7 @@ body {
     min-height: 100vh;
     height: auto;
     overflow-x: hidden;
-    background-color: #f4f0e0;
-    display: block;
+    background-color: #F5F5F7;
     justify-content: center;
 }
 
