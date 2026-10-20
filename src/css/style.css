@@ -67,10 +67,10 @@ section h2 {
 }
 
 main p {
-    max-width: 70ch;
+    max-width: 100ch;
     margin: 0 0 16px;
     color: var(--color-text);
-    text-align: left;
+    text-align: justify;
 }
 
 a {
@@ -179,6 +179,7 @@ button:focus-visible {
 
 .page-intro p {
     font-size: 17px;
+    max-width: 100ch;
 }
 
 .page-back {

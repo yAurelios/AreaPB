@@ -14,20 +14,21 @@ footer article {
 footer h2 {
     margin: 0 0 12px;
     color: var(--color-heading, #252525);
-    font-size: 18px;
+    font-size: 24px;
     line-height: 1.4;
 }
 
 footer address {
     color: var(--color-muted, #606060);
-    font-size: 14px;
+    font-size: 18px;
     font-style: normal;
 }
 
 footer a {
     color: inherit;
     text-decoration-color: var(--color-accent, #ffaa00);
-    text-underline-offset: 3px;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
 }
 
 footer a:hover {
