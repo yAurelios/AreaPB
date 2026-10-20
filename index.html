@@ -1,60 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AREA PB - Início</title>
-    <!-- ShortCut -->
-    <link rel="shortcut icon" href="/src/img/areaPatoBranco.png">
-    <!-- Estilização do Header -->
+    <meta name="description" content="A AREA-PB reúne engenheiros e arquitetos de Pato Branco e promove encontros, troca profissional e participação na cidade.">
+    <title>AREA-PB | Engenharia e arquitetura em Pato Branco</title>
+    <link rel="icon" href="/src/img/areaPbFavicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/src/css/header/header.css">
-    <!-- Estilização do Style padrão -->
     <link rel="stylesheet" href="/src/css/style.css">
-    <!-- Estilização do Footer -->
     <link rel="stylesheet" href="/src/css/footer/footer.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KBL67QW7H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0KBL67QW7H');
+    </script>
 </head>
-<div id="header"></div>
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0KBL67QW7H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0KBL67QW7H');
-</script>
-
-
-<body>
+<body class="home-page">
+    <div id="header"></div>
     <main>
-        <section>
-            <h1>Associação Regional de Engenheiros e Arquitetos</h1>
-            <br><br>
-            <h2>Pato Branco</h2>
-            <br><br>
-            <p>Uma entidade dedicada à promoção e desenvolvimento das áreas de engenharia e arquitetura. Nossa missão é
-                promover a integração entre profissionais, apoiar a troca de conhecimentos e fomentar a inovação e a
-                sustentabilidade em projetos de construção e urbanismo.</p>
+        <section id="homeIntro">
+            <h1>Engenharia e arquitetura em Pato Branco</h1>
+            <h2>Conheça a AREA-PB</h2>
+            <p>A AREA-PB reúne engenheiros e arquitetos de Pato Branco. A associação cria oportunidades de encontro, troca profissional e participação em assuntos importantes para a cidade.</p>
         </section>
-        <!-- <img src="/src/img/bG/patoBrancoAerea.jpg" alt="" style="display: block; width: 80%; margin: 0 auto; padding-bottom: 2rem;"> -->
-        <section id="joinOnTeam">
-            <img src="/src/img/bG/picEngWorking.png" alt="EngenheirosEArquitetosTrabalhandoEmConjunto" class="img-banner-presentention">
+        <section id="joinOnTeam" aria-labelledby="joinTitle">
+            <img src="/src/img/bG/picEngWorking.png" alt="Profissionais de engenharia trabalhando juntos" class="img-banner-presentention">
             <div>
-                <h1><span>Seja Associado</span></h1> <br>
-                <h2><span>Participe da nossa equipe A.R.E.A. - P.B.</span></h2>
-                <br><br>
-                <p>Oferecemos espaço de Coworking, participação nos conselhos municipais e profissionais, espaço de divulgação e muito mais!</p>
+                <h1 id="joinTitle">Faça parte da AREA-PB</h1>
+                <h2>Espaço para participar e trocar experiências</h2>
+                <p>Associados podem usar o espaço de coworking, acompanhar a atuação da associação nos conselhos municipais e profissionais e divulgar seu trabalho pelos canais da AREA-PB. Entre em contato para saber como participar.</p>
+                <a class="text-link" href="https://wa.me/5546991262389" target="_blank" rel="noopener noreferrer">Fale com a associação pelo WhatsApp</a>
             </div>
         </section>
-
+        <section class="map-section" aria-labelledby="homeMapTitle">
+            <h2 id="homeMapTitle">Onde estamos</h2>
+            <p>R. Tapajós, nº 305, sala 106 — Centro, Pato Branco — PR, CEP 85501-030</p>
+            <iframe
+                class="map-frame"
+                src="https://www.google.com/maps?q=R.%20Tapaj%C3%B3s%2C%20n%C2%BA%20305%2C%20sala%20106%2C%20Centro%2C%20Pato%20Branco%20-%20PR%2C%2085501-030&output=embed"
+                title="Mapa da Associação Regional de Engenheiros e Arquitetos de Pato Branco"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
     </main>
     <div id="footer"></div>
+    <script src="/src/js/header.js"></script>
+    <script src="/src/js/footer.js"></script>
 </body>
-
-<script src="/src/js/header.js"></script>
-<script src="/src/js/footer.js"></script>
-
 </html>

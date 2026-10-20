@@ -1,38 +1,34 @@
-document.addEventListener("DOMContentLoaded", function () {
-    loadRevistas();
-});
+document.addEventListener("DOMContentLoaded", loadRevistas);
 
 const magazines = [
     {
-        name: "Revista Engenharia em Debate | 3º Edição",
-        description: "De uma parceria entre CREA-PR e AREA-PB, a atuação de diversas engenharias visando um futuro mais sustentável. Nessa 3º Edição, a Revista Engenharia em Debate trás conteúdos diversos, a retrospectiva de 2022/2023/2024, novos padrões de sustentabilidade e planejamento urbano. Confira!",
-        date: "Ano 2024",
-        link: "/revista/2024-2"
-    },
-    {
-        name: "Revista Engenharia em Debate | 4ª Edição",
-        description: "Confira a 4ª edição da Revista Engenharia em Debate, publicada em 2026.",
-        date: "Ano 2026",
+        name: "Engenharia em Debate — 4ª edição",
+        description: "Publicada em 2026. Consulte a revista em PDF.",
+        date: "2026",
         link: "/revista/2026-4"
     },
+    {
+        name: "Engenharia em Debate — 3ª edição",
+        description: "Publicada em parceria com o CREA-PR, esta edição reúne uma retrospectiva de 2022 a 2024 e conteúdos sobre sustentabilidade e planejamento urbano.",
+        date: "2024",
+        image: "/src/html/revistas/2024/3EdicaoRevistaCapa.png",
+        link: "/revista/2024-2"
+    }
 ];
 
 function loadRevistas() {
     const container = document.getElementById("loadRevistas");
     if (!container) return;
 
-    let content = "";
-    magazines.forEach(magazine => {
-        content += `
-            <section class="magazine">
-                <a href="${magazine.link}">
-                    <h1 class="magazineTitle">${magazine.name}</h1>
-                    <p class="magazineDate">${magazine.date}</p>
-                    <p class="magazineDescription">${magazine.description}</p>
-                </a>
-            </section>
-        `;
-    });
-
-    container.innerHTML = content;
+    container.innerHTML = magazines.map(magazine => `
+        <article class="magazine">
+            <a href="${magazine.link}">
+                ${magazine.image ? `<img class="magazineCover" src="${magazine.image}" alt="Capa da ${magazine.name}">` : ""}
+                <h2 class="magazineTitle">${magazine.name}</h2>
+                <p class="magazineDate">Ano ${magazine.date}</p>
+                <p class="magazineDescription">${magazine.description}</p>
+                <span class="magazineMore">Ler edição</span>
+            </a>
+        </article>
+    `).join("");
 }

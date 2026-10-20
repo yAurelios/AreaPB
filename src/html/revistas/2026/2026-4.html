@@ -3,46 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leia a 4ª edição da revista Engenharia em Debate, publicada em 2026.">
     <title>AREA PB - Revista Engenharia em Debate | 4ª Edição</title>
-    <!-- ShortCut -->
-    <link rel="shortcut icon" href="/src/img/areaPatoBranco.png">
-    <!-- Estilização do Header -->
+    <link rel="icon" href="/src/img/areaPbFavicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/src/css/header/header.css">
-    <!-- Estilização do Style padrão -->
     <link rel="stylesheet" href="/src/css/style.css">
-    <!-- Estilização do Footer -->
     <link rel="stylesheet" href="/src/css/footer/footer.css">
-    <!-- Estilização do load de revistas -->
     <link rel="stylesheet" href="/src/css/revistas/revistas.css">
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KBL67QW7H"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-0KBL67QW7H');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0KBL67QW7H');
     </script>
 </head>
 <body>
     <div id="header"></div>
     <main>
+        <a class="page-back" href="/revista">← Voltar para revistas</a>
         <section id="otherPage">
-            <h1>Revista Engenharia em Debate | 4ª Edição</h1>
-            <br><br>
-            <p>Confira a 4ª edição da Revista Engenharia em Debate, publicada em 2026.</p>
+            <h1>Engenharia em Debate — 4ª edição</h1>
+            <p>Publicada em 2026. Abra a edição completa no navegador ou baixe o arquivo para ler depois.</p>
+            <div class="magazine-reader-actions">
+                <a class="button-link" href="/src/pdf/4EdicaoRevista.pdf" target="_blank" rel="noopener">Abrir revista em PDF</a>
+                <a class="button-link button-link--light" href="/src/pdf/4EdicaoRevista.pdf" download="Engenharia-em-Debate-4-edicao.pdf">Baixar PDF</a>
+            </div>
         </section>
-        <iframe src="/src/pdf/4EdicaoRevista.pdf" class="revista" title="Revista Engenharia em Debate - 4ª Edição"></iframe>
-        <section class="revistaMobile">
-            <a href="/src/pdf/4EdicaoRevista.pdf">Baixe a revista aqui!</a>
+        <section class="pdf-reader" aria-labelledby="pdfReaderTitle">
+            <div class="pdf-reader-heading">
+                <h2 id="pdfReaderTitle">Leia a revista nesta página</h2>
+                <p>Use os controles do leitor para ampliar, navegar pelas páginas ou pesquisar no documento. Se o leitor não carregar, abra ou baixe o PDF pelos botões acima.</p>
+            </div>
+            <iframe src="/src/pdf/4EdicaoRevista.pdf" class="revista" title="Leitor da revista Engenharia em Debate, 4ª edição" loading="lazy">
+                <p>Seu navegador não exibe o leitor de PDF incorporado. <a href="/src/pdf/4EdicaoRevista.pdf">Abra a 4ª edição em PDF</a>.</p>
+            </iframe>
+        </section>
+        <section class="revistaMobile" aria-label="Acesso à revista em celular">
+            <img src="/src/html/revistas/2026/4EdicaoRevistaCapa.png" alt="Capa da 4ª edição da revista Engenharia em Debate">
+            <p>Para uma leitura mais confortável no celular, abra a revista em PDF ou salve o arquivo no dispositivo.</p>
+            <a class="button-link" href="/src/pdf/4EdicaoRevista.pdf" target="_blank" rel="noopener">Abrir revista em PDF</a>
+            <a class="button-link button-link--light" href="/src/pdf/4EdicaoRevista.pdf" download="Engenharia-em-Debate-4-edicao.pdf">Baixar PDF</a>
         </section>
     </main>
     <div id="footer"></div>
+    <script src="/src/js/header.js"></script>
+    <script src="/src/js/footer.js"></script>
 </body>
-<!-- Script do Header -->
-<script src="/src/js/header.js"></script>
-<!-- Script do Footer -->
-<script src="/src/js/footer.js"></script>
-<!-- Script do menu de load das Revistas -->
-<script src="/src/js/revistas.js"></script>
 </html>

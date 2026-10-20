@@ -1,49 +1,59 @@
 function loadHeader() {
-    const headerHTML = `
+    const headerContainer = document.getElementById("header");
+    if (!headerContainer) return;
+
+    headerContainer.innerHTML = `
     <header>
-    <button class="hamburger" aria-label="Toggle menu">☰</button>
+        <button class="hamburger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="siteNavigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div id="headerContent">
-            <figure class="logo">
-                <img src="/src/img/areaPatoBranco.svg" alt="areaPBlogo" id="pcVersion"/>
-                <img src="/src/img/areaPatoBrancoWhite.svg" alt="areaPBlogo" id="mobileVersion"/>
-            </figure>
-            <nav class="navBox" style="display: none;"> <!-- Oculta inicialmente -->
+            <a class="logo" href="/" aria-label="AREA-PB — página inicial">
+                <img src="/src/img/areaPatoBranco.svg" alt="AREA-PB">
+            </a>
+            <nav class="navBox" id="siteNavigation" aria-label="Navegação principal">
                 <ul>
-                    <li><a href="/">Página Inicial</a></li>
+                    <li><a href="/">Início</a></li>
                     <li><a href="/eventos">Eventos</a></li>
                     <li><a href="/revista">Revista</a></li>
-                    <li><a href="/infos">Sobre nós</a></li>
+                    <li><a href="/infos">Sobre</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     `;
 
-    document.getElementById('header').innerHTML = headerHTML;
+    const hamburger = headerContainer.querySelector(".hamburger");
+    const navBox = headerContainer.querySelector(".navBox");
+    const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
 
-    const hamburger = document.querySelector('.hamburger');
-    const navBox = document.querySelector('.navBox');
+    navBox.querySelectorAll("a").forEach(link => {
+        const linkPath = link.pathname.replace(/\/+$/, "") || "/";
+        const isCurrentPage = linkPath === "/"
+            ? currentPath === "/"
+            : currentPath === linkPath || currentPath.startsWith(`${linkPath}/`);
 
-    // Evita animação no carregamento
-    setTimeout(() => {
-        navBox.style.display = "flex"; // Torna visível sem animação
-        navBox.classList.add("ready"); // Adiciona classe que permite animação futura
-    }, 10);
-
-    hamburger.addEventListener('click', () => {
-        navBox.classList.toggle('active');
+        if (isCurrentPage) {
+            link.setAttribute("aria-current", "page");
+        }
     });
 
-    // Remove a animação ao redimensionar a tela para evitar efeito indesejado
-    window.addEventListener("resize", () => {
-        if (!navBox.classList.contains("active")) {
-            navBox.style.transition = "none"; // Remove transição temporariamente
-            setTimeout(() => {
-                navBox.style.transition = ""; // Reativa a transição depois que o resize termina
-            }, 100);
-        }
+    hamburger.addEventListener("click", () => {
+        const isOpen = hamburger.getAttribute("aria-expanded") === "true";
+        hamburger.setAttribute("aria-expanded", String(!isOpen));
+        hamburger.setAttribute("aria-label", isOpen ? "Abrir menu" : "Fechar menu");
+        navBox.classList.toggle("active", !isOpen);
+    });
+
+    navBox.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            hamburger.setAttribute("aria-expanded", "false");
+            hamburger.setAttribute("aria-label", "Abrir menu");
+            navBox.classList.remove("active");
+        });
     });
 }
 
-// Inicializa o cabeçalho ao carregar a página
 document.addEventListener("DOMContentLoaded", loadHeader);

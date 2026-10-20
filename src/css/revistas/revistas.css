@@ -1,76 +1,185 @@
-.magazine{
-    border-left: solid #ffaa00 10px;
-    margin-top: 3rem;
-    max-width: 100%;
-    width: 90%;
-    border-bottom: none;
-    padding-left: 1rem;
-}
-.magazine h1{
-    border-bottom: none;
-}
-.magazine a{
-    text-decoration: none;
-    color: black;
-}
-.magazineDate {
-    padding: 1rem;
+#loadRevistas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: 24px;
 }
 
-
-/* ABA DA REVISTA */
-#otherPage{
-    /* border: solid red 1px; */
+.magazine {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    min-width: 0;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--color-border, #dedede);
+    border-top: 4px solid var(--color-accent, #ffaa00);
+    border-radius: var(--radius-card, 10px);
+    background: var(--color-surface, #ffffff);
+    transition: box-shadow 160ms ease, transform 160ms ease;
 }
-.revista{
+
+.magazine:hover {
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.09);
+    transform: translateY(-2px);
+}
+
+.magazine a {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+    color: var(--color-text, #292929);
+    text-decoration: none;
+}
+
+.magazineCover {
+    display: block;
     width: 100%;
-    height: 80vh;
-    margin-bottom: 3rem;
+    max-height: 360px;
+    margin-bottom: 18px;
+    border-radius: 7px;
+    background: #f5f5f7;
+    object-fit: contain;
 }
-#customPDF{
-    margin: 1rem;
+
+.magazineTitle {
+    margin: 0 0 10px;
+    color: var(--color-heading, #252525);
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.magazineDate {
+    margin: 0 0 12px;
+    color: var(--color-muted, #606060);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.magazineDescription {
+    margin: 0 0 18px;
+    line-height: 1.6;
+}
+
+.magazineMore {
+    margin-top: auto;
+    color: var(--color-heading, #252525);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent, #ffaa00);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+#otherPage {
+    display: block;
+    margin-bottom: 28px;
+}
+
+#otherPage h1 {
+    margin-bottom: 16px;
+}
+
+#otherPage p {
+    max-width: 75ch;
+}
+
+.revista {
+    display: block;
     width: 100%;
-    text-align: center;
-    font-size: 16px;
-    height: auto;
+    height: clamp(540px, 78vh, 960px);
+    border: 1px solid var(--color-border, #dedede);
+    border-radius: var(--radius-card, 10px);
+    background: #ffffff;
 }
-.revistaMobile{
+
+.pdf-reader {
+    margin: 0 0 36px;
+}
+
+.pdf-reader-heading {
+    margin-bottom: 16px;
+}
+
+.pdf-reader-heading h2 {
+    margin: 0 0 8px;
+    color: var(--color-heading, #252525);
+    font-size: 20px;
+}
+
+.pdf-reader-heading p,
+.revistaMobile p {
+    max-width: 75ch;
+    margin: 0;
+    color: var(--color-muted, #606060);
+    font-size: 14px;
+}
+
+.revistaMobile {
     display: none;
 }
-@media (max-width: 600px){
-    .revista{
+
+.magazine-reader-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 22px 0 28px;
+}
+
+.magazine-reader-actions .button-link {
+    margin-top: 0;
+}
+
+@media (max-width: 700px) {
+    .revista {
         display: none;
     }
-    .revistaMobile{
-        width: 100%;
+
+    .pdf-reader {
+        display: none;
+    }
+
+    .revistaMobile {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        /* border: solid red 1px; */
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 0 0 36px;
     }
-    .revistaMobile img{
+
+    .revistaMobile p {
+        align-self: stretch;
+        text-align: left;
+    }
+
+    .revistaMobile img {
+        display: block;
+        width: min(100%, 420px);
+        height: auto;
+        border: 1px solid var(--color-border, #dedede);
+        border-radius: var(--radius-card, 10px);
+        background: #ffffff;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .revistaMobile .button-link {
         width: 100%;
+        min-height: 48px;
+        margin: 0;
     }
-    .revistaMobile a{
-        margin-top: 2rem;
-        padding: 1rem;
-        background-color: #281767;
-        border-radius: 20px;
-        text-align: center;
-        width: 50%;
-        color: white;
-        /* border: solid red 1px; */
-        /* text-decoration: underline; */
+
+    .magazine-reader-actions {
+        display: none;
     }
-    #otherPage{
-        gap: 0;
+}
+
+@media (min-width: 701px) {
+    .revistaMobile {
+        display: none;
     }
-    #otherPage p{
-        margin-top: 3vh;
-        margin-bottom: 3vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .magazine {
+        transition: none;
     }
 }

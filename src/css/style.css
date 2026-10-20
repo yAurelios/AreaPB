@@ -1,135 +1,311 @@
+:root {
+    color-scheme: light;
+    --color-background: #f5f5f7;
+    --color-surface: #ffffff;
+    --color-text: #292929;
+    --color-heading: #252525;
+    --color-muted: #606060;
+    --color-border: #dedede;
+    --color-accent: #ffaa00;
+    --font-body: "Inter", "Segoe UI", Arial, Helvetica, sans-serif;
+    --content-width: 1120px;
+    --header-height: 88px;
+    --radius-card: 10px;
+    --radius-button: 7px;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    /* scrollbar-width: none; */
+    box-sizing: border-box;
 }
 
 html {
-    font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
 
 body {
-    width: 100%;
+    min-width: 320px;
     min-height: 100vh;
-    height: auto;
+    margin: 0;
     overflow-x: hidden;
-    background-color: #F5F5F7;
-    justify-content: center;
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 main {
-    /* border: solid red 1px; */
+    width: min(var(--content-width), calc(100% - 48px));
+    min-height: 55vh;
     margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 20vh;
-    width: 80%;
-    height: auto;
-    box-sizing: border-box;
-    overflow: hidden;
-    display: block;
+    padding: calc(var(--header-height) + 48px) 0 48px;
 }
 
 section {
-    margin-bottom: 3rem;
+    margin: 0 0 48px;
 }
 
-/* Estilização dos títulos gerais */
-section h1, 
+section h1,
 section h2 {
-    color: #281767;
-    display: inline-block;
-    border-bottom: solid 8px #ffaa00;
+    color: var(--color-heading);
 }
 
 section h1 {
-    font-size: 28px;
-}
-main p {
-    width: 65%;
-    text-align: justify;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 0 20px;
+    border-bottom: 5px solid var(--color-accent);
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-/* SEÇÃO #joinOnTeam */
+section h2 {
+    margin: 0 0 14px;
+    font-size: clamp(21px, 2.4vw, 26px);
+    line-height: 1.3;
+}
+
+main p {
+    max-width: 70ch;
+    margin: 0 0 16px;
+    color: var(--color-text);
+    text-align: left;
+}
+
+a {
+    color: #333333;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+#homeIntro {
+    padding: 28px 0 16px;
+}
+
+#homeIntro h1 {
+    max-width: 100%;
+}
+
+#homeIntro h2 {
+    margin-top: -8px;
+    font-weight: 500;
+}
+
+#homeIntro p {
+    font-size: 18px;
+}
+
 #joinOnTeam {
-    /* border: solid red 1px; */
-    padding-top: 6vh;
-    gap: 3vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
-    flex-wrap: wrap;
+    gap: 40px;
+    padding: 36px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
 }
 
 #joinOnTeam img {
-    width: 40%;
+    display: block;
+    width: 100%;
     height: auto;
+    border-radius: var(--radius-card);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 #joinOnTeam div {
-    width: 55%;
-    /* border: solid red 1px; */
-    display: flex;
-    flex-direction: column;
+    min-width: 0;
 }
 
-/* ajustando h1 e h2 para evitar a borda/sublinhado estendido */
-#joinOnTeam h1,
+#joinOnTeam h1 {
+    margin-bottom: 12px;
+    border: 0;
+    font-size: clamp(28px, 3.5vw, 36px);
+}
+
 #joinOnTeam h2 {
-    /* border: solid red 1px; */
-    border-bottom: none;
-    width: 100%;
-    display: flex;
-}
-
-#joinOnTeam h1 span,
-#joinOnTeam h2 span {
-    display: table;
-    border-bottom: solid 8px #ffaa00;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--color-accent);
 }
 
 #joinOnTeam p {
-    width: 100%;
-    text-align: justify;
-}
-.img-banner-presentention{
-    border-radius: 10px; 
-    box-shadow: outset 5px 10px 14px rgba(0, 0, 0, 0.4);
+    margin-bottom: 0;
 }
 
-@media (max-width: 600px) {
-    * {
-        scrollbar-width: none;
+.text-link,
+.button-link {
+    display: inline-flex;
+    width: fit-content;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    padding: 10px 18px;
+    border: 1px solid var(--color-heading);
+    border-radius: var(--radius-button);
+    background: var(--color-heading);
+    color: var(--color-surface);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.text-link:hover,
+.button-link:hover {
+    border-color: #111111;
+    background: #111111;
+}
+
+.button-link--light {
+    border-color: var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-heading);
+}
+
+.button-link--light:hover {
+    border-color: var(--color-accent);
+    background: var(--color-surface);
+}
+
+.page-intro {
+    margin-bottom: 36px;
+}
+
+.page-intro p {
+    font-size: 17px;
+}
+
+.page-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-decoration-color: var(--color-accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.home-page {
+    background-color: var(--color-background);
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.84)),
+        url("/src/img/bG/patoBrancoAerea.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home-page #joinOnTeam {
+    background: rgba(255, 255, 255, 0.94);
+}
+
+.map-section {
+    padding: 28px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    background: var(--color-surface);
+}
+
+.map-section h2 {
+    width: fit-content;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.map-frame {
+    display: block;
+    width: 100%;
+    height: 380px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-button);
+    background: var(--color-background);
+}
+
+.about-page main > section p {
+    margin-top: 12px;
+    margin-bottom: 28px;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.about-page .page-intro p {
+    max-width: 78ch;
+    font-size: 21px;
+}
+
+.about-page .map-section p {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+    :root {
+        --header-height: 72px;
     }
-    body{
-        overflow-x: hidden;
+
+    main {
+        width: min(100% - 36px, var(--content-width));
+        padding-top: calc(var(--header-height) + 32px);
+        padding-bottom: 36px;
     }
-    main{
-        margin-top: 15vh;
+
+    section {
+        margin-bottom: 34px;
     }
-    main p{
-        width: 100%;
+
+    #homeIntro {
+        padding-top: 12px;
     }
-    #joinOnTeam div{
-        text-align: center;
-        width: 100%;
+
+    #homeIntro p,
+    .page-intro p {
+        font-size: 16px;
     }
-    #joinOnTeam h1{
-        width: 100%;
-        /* border: solid red 1px; */
-        display: flex;
-        justify-content: center;
+
+    #joinOnTeam {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 20px;
     }
-    #joinOnTeam img{
-        width: 100%;
+
+    #joinOnTeam h1,
+    #joinOnTeam h2 {
+        text-align: left;
     }
-    section{
-        margin-bottom: 0.5rem;
+
+    .home-page {
+        background-attachment: scroll;
+        background-position: center top;
     }
-    section h1{
-        text-align: center;
-        font-size: 24px;
+
+    .map-section {
+        padding: 20px;
     }
-    .img-banner-presentention{
-        box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.4);
+
+    .map-frame {
+        height: 320px;
+    }
+
+    .about-page main > section p {
+        font-size: 18px;
+        line-height: 1.75;
+    }
+
+    .about-page .page-intro p {
+        font-size: 19px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
     }
 }

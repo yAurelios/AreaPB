@@ -3,47 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AREA PB - Revistas</title>
-    <!-- ShortCut -->
-    <link rel="shortcut icon" href="/src/img/areaPatoBranco.png">
-    <!-- Estilização do Header -->
+    <meta name="description" content="Leia as edições da revista Engenharia em Debate, publicada pela AREA-PB e seus parceiros.">
+    <title>Revistas | AREA-PB</title>
+    <link rel="icon" href="/src/img/areaPbFavicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/src/css/header/header.css">
-    <!-- Estilização do Style padrão -->
     <link rel="stylesheet" href="/src/css/style.css">
-    <!-- Estilização do Footer -->
     <link rel="stylesheet" href="/src/css/footer/footer.css">
-    <!-- Estilização do load de revistas -->
     <link rel="stylesheet" href="/src/css/revistas/revistas.css">
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KBL67QW7H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0KBL67QW7H');
+    </script>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0KBL67QW7H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0KBL67QW7H');
-</script>
-
-
-<div id="header"></div>
 <body>
+    <div id="header"></div>
     <main>
-        <section>
-            <h1>Revistas da Associação de Engenheiros e Arquitetos de Pato Branco</h1>
-            <br><br>
-            <p>A AREA-PB publica revistas periódicas focadas em engenharia e arquitetura. Estas revistas tratam dos principais temas para o desenvolvimento profissional, incluindo novidades técnicas, eventos, e cursos disponíveis.</p>
+        <section class="page-intro">
+            <h1>Engenharia em Debate</h1>
+            <p>Leia as edições da revista e acompanhe temas de engenharia, arquitetura e planejamento urbano abordados pela AREA-PB e seus parceiros.</p>
         </section>
-        <div id="loadRevistas"></div>
+        <div id="loadRevistas" aria-label="Edições da revista"></div>
     </main>
     <div id="footer"></div>
+    <script src="/src/js/header.js"></script>
+    <script src="/src/js/footer.js"></script>
+    <script src="/src/js/revistas.js"></script>
 </body>
-<!-- Script do Header -->
-<script src="/src/js/header.js"></script>
-<!-- Script do Footer -->
-<script src="/src/js/footer.js"></script>
-<!-- Script do menu de load das Revistas -->
-<script src="/src/js/revistas.js"></script>
 </html>

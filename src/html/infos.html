@@ -3,11 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AREA PB - Sobre nós</title>
+    <meta name="description" content="Conheça a Associação Regional de Engenheiros e Arquitetos de Pato Branco.">
+    <title>Sobre a AREA-PB</title>
+    <link rel="icon" href="/src/img/areaPbFavicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/src/css/header/header.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/footer/footer.css">
 </head>
-<body>
-    <main style=" width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-        <h2>Em desenvolvimento</h2>
+<body class="about-page">
+    <div id="header"></div>
+    <main>
+        <section class="page-intro">
+            <h1>Sobre a AREA-PB</h1>
+            <p>A AREA-PB é a Associação Regional de Engenheiros e Arquitetos de Pato Branco. A entidade aproxima profissionais da região e abre espaço para compartilhar experiências e acompanhar assuntos importantes para a engenharia e a arquitetura locais.</p>
+        </section>
+        <section aria-labelledby="aboutActivities">
+            <h2 id="aboutActivities">O que fazemos</h2>
+            <p>Por meio de encontros e iniciativas da associação, profissionais podem trocar conhecimentos e acompanhar temas que afetam suas áreas de atuação.</p>
+            <p>A AREA-PB também disponibiliza um espaço de coworking, participa de conselhos municipais e profissionais e oferece canais para divulgar o trabalho de seus associados.</p>
+        </section>
+        <section aria-labelledby="aboutContact">
+            <h2 id="aboutContact">Como falar com a associação</h2>
+            <p>Quer conhecer as atividades ou saber como participar? Envie uma mensagem para a associação pelo WhatsApp.</p>
+            <a class="text-link" href="https://wa.me/5546991262389" target="_blank" rel="noopener noreferrer">Enviar mensagem pelo WhatsApp</a>
+        </section>
+        <section class="map-section" aria-labelledby="aboutMapTitle">
+            <h2 id="aboutMapTitle">Onde estamos</h2>
+            <p>R. Tapajós, nº 305, sala 106, Centro, Pato Branco — PR, CEP 85501-030.</p>
+            <iframe
+                class="map-frame"
+                src="https://www.google.com/maps?q=R.%20Tapaj%C3%B3s%2C%20n%C2%BA%20305%2C%20sala%20106%2C%20Centro%2C%20Pato%20Branco%20-%20PR%2C%2085501-030&output=embed"
+                title="Mapa da Associação Regional de Engenheiros e Arquitetos de Pato Branco"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
     </main>
+    <div id="footer"></div>
+    <script src="/src/js/header.js"></script>
+    <script src="/src/js/footer.js"></script>
 </body>
 </html>

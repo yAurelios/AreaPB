@@ -1,54 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AREA PB - Revista Engenharia em Debate | 3º Edição</title>
-    <!-- ShortCut -->
-    <link rel="shortcut icon" href="/src/img/areaPatoBranco.png">
-    <!-- Estilização do Header -->
+    <meta name="description" content="Leia a 3ª edição da revista Engenharia em Debate, publicada em parceria com o CREA-PR.">
+    <title>AREA PB - Revista Engenharia em Debate | 3ª Edição</title>
+    <link rel="icon" href="/src/img/areaPbFavicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/src/css/header/header.css">
-    <!-- Estilização do Style padrão -->
     <link rel="stylesheet" href="/src/css/style.css">
-    <!-- Estilização do Footer -->
     <link rel="stylesheet" href="/src/css/footer/footer.css">
-    <!-- Estilização do load de revistas -->
     <link rel="stylesheet" href="/src/css/revistas/revistas.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KBL67QW7H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0KBL67QW7H');
+    </script>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0KBL67QW7H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0KBL67QW7H');
-</script>
-
-
-<div id="header"></div>
 <body>
+    <div id="header"></div>
     <main>
+        <a class="page-back" href="/revista">← Voltar para revistas</a>
         <section id="otherPage">
-            <h1>Revista Engenharia em Debate | 3º Edição</h1>
-            <br><br>
-            <p>De uma parceria entre CREA-PR e AREA-PB, a atuação de diversas engenharias visando um futuro mais sustentável. Nessa 3º Edição, a Revista Engenharia em Debate trás conteúdos diversos, a retrospectiva de 2022/2023/2024, novos padrões de sustentabilidade e planejamento urbano. Confira!</p>
+            <h1>Engenharia em Debate — 3ª edição</h1>
+            <p>Publicada em parceria com o CREA-PR, esta edição reúne uma retrospectiva de 2022 a 2024 e conteúdos sobre sustentabilidade e planejamento urbano.</p>
+            <div class="magazine-reader-actions">
+                <a class="button-link" href="/src/pdf/3EdicaoRevista.pdf" target="_blank" rel="noopener">Abrir revista em PDF</a>
+                <a class="button-link button-link--light" href="/src/pdf/3EdicaoRevista.pdf" download="Engenharia-em-Debate-3-edicao.pdf">Baixar PDF</a>
+            </div>
         </section>
-        <!-- <a id="customPDF" href="2024-2.html?pdf=/src/pdf/3EdicaoRevista.pdf" target="_blank"><p>Abra o PDF por aqui</p></a> -->
-        <iframe src="https://areapb.com.br/src/pdf/3EdicaoRevista.pdf" class="revista"></iframe>
-        <section class="revistaMobile">
-            <img src="/src/html/revistas/2024/3EdicaoRevistaCapa.png" alt="CapaRevista3Edicao">
-            <a href="https://areapb.com.br/src/pdf/3EdicaoRevista.pdf">Baixe a revista aqui!</a>
+        <section class="pdf-reader" aria-labelledby="pdfReaderTitle">
+            <div class="pdf-reader-heading">
+                <h2 id="pdfReaderTitle">Leia a revista nesta página</h2>
+                <p>Use os controles do leitor para ampliar, navegar pelas páginas ou pesquisar no documento. Se o leitor não carregar, abra ou baixe o PDF pelos botões acima.</p>
+            </div>
+            <iframe src="/src/pdf/3EdicaoRevista.pdf" class="revista" title="Leitor da revista Engenharia em Debate, 3ª edição" loading="lazy">
+                <p>Seu navegador não exibe o leitor de PDF incorporado. <a href="/src/pdf/3EdicaoRevista.pdf">Abra a 3ª edição em PDF</a>.</p>
+            </iframe>
         </section>
-        
+        <section class="revistaMobile" aria-label="Acesso à revista em celular">
+            <img src="/src/html/revistas/2024/3EdicaoRevistaCapa.png" alt="Capa da 3ª edição da revista Engenharia em Debate">
+            <p>Para uma leitura mais confortável no celular, abra a revista em PDF ou salve o arquivo no dispositivo.</p>
+            <a class="button-link" href="/src/pdf/3EdicaoRevista.pdf" target="_blank" rel="noopener">Abrir revista em PDF</a>
+            <a class="button-link button-link--light" href="/src/pdf/3EdicaoRevista.pdf" download="Engenharia-em-Debate-3-edicao.pdf">Baixar PDF</a>
+        </section>
     </main>
     <div id="footer"></div>
+    <script src="/src/js/header.js"></script>
+    <script src="/src/js/footer.js"></script>
 </body>
-<!-- Script do Header -->
-<script src="/src/js/header.js"></script>
-<!-- Script do Footer -->
-<script src="/src/js/footer.js"></script>
-<!-- Script do menu de load das Revistas -->
-<script src="/src/js/revistas.js"></script>
 </html>
