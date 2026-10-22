@@ -5,6 +5,7 @@ const magazines = [
         name: "Engenharia em Debate — 4ª edição",
         description: "Publicada em 2026. Consulte a revista em PDF.",
         date: "2026",
+        image: "/src/html/revistas/2026/4EdicaoRevistaCapa.png",
         link: "/revista/2026-4"
     },
     {
